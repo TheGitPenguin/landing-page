@@ -1,0 +1,26 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "my landing page",
+  "homepage": "https://github.com/TheGitPenguin/landing-page#readme",
+  "bugs": {
+    "url": "https://github.com/TheGitPenguin/landing-page/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/TheGitPenguin/landing-page.git"
+  },
+  "license": "ISC",
+  "author": "the penguin",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
