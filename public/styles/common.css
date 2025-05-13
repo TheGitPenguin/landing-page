@@ -1,0 +1,128 @@
+html, body {
+  height: 100%; /* Fait en sorte que html et body prennent toute la hauteur */
+  margin: 0;
+}
+
+.body {
+  background: repeating-conic-gradient(
+    from 45deg,
+    #a37fb1 0% 25%,
+    #604566 0% 50%
+  );
+  background-size: max(10vw, 10svh) max(10vw, 10svh);
+
+  display: flex; /* Transforme le body en conteneur flex */
+  flex-direction: column; /* Affichage en colonne */
+  min-height: 100vh; /* S'assure que le body prend au minimum toute la hauteur de la vue */
+
+  animation: background 0.5s ease-in-out; /* Animation de transition pour le fond */
+}
+
+
+header {
+  font-size: 20px;
+  height: 90px;
+
+  color: rgb(201, 156, 207);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  flex-direction: row;
+  background: #433147d8;
+}
+
+.blur::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Pour Safari */
+  z-index: -1; /* Assure que le fond est derrière le contenu */
+}
+
+.blur {
+  position: relative; /* Nécessaire pour le positionnement du pseudo-élément */
+}
+
+footer {
+  font-size: 20px;
+  height: 90px;
+
+  color: rgb(201, 156, 207);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  flex-direction: row;
+
+  background: #433147d8;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  gap: 20px; /* Espace entre les cartes */
+}
+
+.card {
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+  color: rgb(201, 156, 207);
+
+  background: #433147d8;
+
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+
+  margin: 7px;
+}
+
+.card::before {
+  border-radius: 10px;
+}
+
+
+
+.card-image {
+  height: 200px;
+  width: 200px;
+
+  border-radius: 10px;
+}
