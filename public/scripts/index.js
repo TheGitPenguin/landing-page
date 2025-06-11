@@ -16,7 +16,7 @@ body.addEventListener('scroll', () =>
 
 vpsCard.addEventListener('click', () =>
     {
-        
+        window.location.href = "/vps.html";
     }
 );
 
