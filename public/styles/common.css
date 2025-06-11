@@ -1,6 +1,16 @@
 html, body {
-  height: 100%; /* Fait en sorte que html et body prennent toute la hauteur */
+  height: 100%;
+  width: 100%; /* Fait en sorte que html et body prennent toute la hauteur */
   margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Affichage en colonne */
+  align-items: center;
+
+  a {
+    text-decoration: none; /* Enlève le soulignement des liens */
+    color: inherit; /* Hérite de la couleur du parent */
+  }
 }
 
 .body {
@@ -22,15 +32,21 @@ html, body {
 header {
   font-size: 20px;
   height: 90px;
-
+  min-height: 90px;
+  width: calc(100% - 80px);
   color: rgb(201, 156, 207);
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
   flex-direction: row;
   background: #433147d8;
+  margin:20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .blur::before {
@@ -52,6 +68,9 @@ header {
 footer {
   font-size: 20px;
   height: 90px;
+  min-height: 90px;
+  width: calc(100% - 80px);
+
 
   color: rgb(201, 156, 207);
 
@@ -62,6 +81,19 @@ footer {
   flex-direction: row;
 
   background: #433147d8;
+
+  margin:20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+
+  font-size: 0.875rem;
+  p {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 main {
@@ -69,9 +101,8 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;
+
   height: 100%;
-  width: 100%;
 }
 
 .card-container {
@@ -83,6 +114,12 @@ main {
   height: 100%;
 
   gap: 20px; /* Espace entre les cartes */
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+  }
 }
 
 .card {
