@@ -186,7 +186,8 @@ main {
 }
 
 .info.card {
-  width: 500px;
+  min-width: 500px;
+  width: auto;
   height: auto;
 
   h2 {
@@ -203,7 +204,7 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 colonnes de largeur égale */
     gap: 20px;
-    width: 100%;
+    width: 500px;
 
     .card {
       h3 {
