@@ -190,6 +190,8 @@ main {
   width: auto;
   height: auto;
 
+  cursor: default;
+
   h2 {
     font-size: 20px;
     color: rgb(255, 255, 255);
@@ -207,6 +209,7 @@ main {
     width: 500px;
 
     .card {
+      cursor: default;
       h3 {
         font-size: 18px;
         color: rgb(255, 255, 255);
