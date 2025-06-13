@@ -204,9 +204,9 @@ main {
 
   .card-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colonnes de largeur égale */
+    grid-template-columns: repeat(5, 1fr); /* 2 colonnes de largeur égale */
     gap: 20px;
-    width: 500px;
+    width: 1400px;
 
     .card {
       cursor: default;
@@ -217,7 +217,7 @@ main {
       }
       background-color: #FFFFFF00;
       width: calc(100% - 40px); /* Les cartes prennent toute la largeur de la colonne */
-      height: 200px; /* Hauteur automatique pour s'adapter au contenu */
+      height: 180px; /* Hauteur automatique pour s'adapter au contenu */
     }
   }
 }
